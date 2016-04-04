@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="restaurant" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+<script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Welcome to the restaurant</title>
+</head>
+
+<body ng-controller="MainController as mainVm">
+<header>
+    <nav class="navbar navbar-default" style="background-color: grey">
+        <div class="container">
+            <div class="navbar-header">
+               <h1>Welcome to the restaurant</h1>
+                </div>
+            <ul class="nav navbar-nav navbar-right" id="one">
+                <li><a ng-click="mainVm.templateUrl='mainTemp.html'"><span class="glyphicon glyphicon-home">Home</a></li>
+                <li><a ng-click="mainVm.templateUrl='GuestPage.html'">Guest</a></li> 
+                <li><a href="OwnerLoginPage.html">Owner</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<section ng-include="mainVm.templateUrl">
+  
+</section>
+
+<div class="navbar navbar-default navbar-fixed-bottom" style="background-color: grey">
+    <div class="container">
+                  <div class="col-sm-6">
+                <p id="footer1"><b>Address Information:</b><br>
+                9335 Lee hwy,apt 0410<br>
+                zip code:22031</p>
+                  </div>
+              <div class="col-sm-6">
+                  <p id="footer2"><b>Contact Information:</b><br>
+              Phone number:614-620-8373<br>
+              Email id:sarthak.sheth@gmail.com</p></div>
+</div>
+    </div>
+
+
+
+
+</body>
+</html>
